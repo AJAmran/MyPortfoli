@@ -1,6 +1,7 @@
 import Bannar from "./components/Bannar/Bannar";
 import Navbar from "./components/Navbar/Navbar";
 import Features from "./components/features/Features";
+import Projects from "./components/projects/Projects";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Navbar />
           <Bannar />
           <Features />
+          <Projects />
         </div>
       </div>
     </>
