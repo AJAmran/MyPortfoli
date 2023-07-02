@@ -2,6 +2,7 @@ import Bannar from "./components/Bannar/Bannar";
 import Navbar from "./components/Navbar/Navbar";
 import Features from "./components/features/Features";
 import Projects from "./components/projects/Projects";
+import Resume from "./components/resume/Resume";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Bannar />
           <Features />
           <Projects />
+          <Resume />
         </div>
       </div>
     </>
