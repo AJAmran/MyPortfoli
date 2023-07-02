@@ -1,8 +1,8 @@
 import React, {  useState } from 'react'
 import Title from '../Layout/Title';
-// import Education from './Education';
-// import Skills from './Skills';
-// import Experience from './Experience';
+import Education from './Education';
+import Skills from './Skills';
+import Experience from './Experience';
 
 
 const Resume = () => {
@@ -17,6 +17,19 @@ const Resume = () => {
       </div>
       <div>
         <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+        <li
+            onClick={() =>
+              setEducationData(false) &
+              setSkillData(true) &
+              setExperienceData(false) &
+              setAchievementData(false)
+            }
+            className={`${
+              skillData ? "border-designColor rounded-lg" : "border-transparent"
+            } resumeLi`}
+          >
+            Professional Skills
+          </li>
           <li
             onClick={() =>
               setEducationData(true) &
@@ -32,19 +45,7 @@ const Resume = () => {
           >
             Education
           </li>
-          <li
-            onClick={() =>
-              setEducationData(false) &
-              setSkillData(true) &
-              setExperienceData(false) &
-              setAchievementData(false)
-            }
-            className={`${
-              skillData ? "border-designColor rounded-lg" : "border-transparent"
-            } resumeLi`}
-          >
-            Professional Skills
-          </li>
+         
           <li
             onClick={() =>
               setEducationData(false) &
@@ -77,10 +78,10 @@ const Resume = () => {
           </li>
         </ul>
       </div>
+      {skillData && <Skills />}
       {educationData && <Education />}
-      {/* {skillData && <Skills />}
       {achievementData && <Achievement />}
-      {experienceData && <Experience />} */}
+      {experienceData && <Experience />}
  
     </section>
   );
