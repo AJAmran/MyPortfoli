@@ -1,62 +1,60 @@
-import React, { useState } from 'react';
-import { BsGithub } from 'react-icons/bs';
-import { FaGlobe } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import ResumeCard from "./ResumeCard";
 
-const ProjectsCard = ({ title, des, src }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
+const Achievement = () => {
   return (
-    <div className="w-full p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
-      <div
-        className={`w-full h-60 overflow-hidden rounded-lg ${
-          isHovered ? 'hovered' : ''
-        }`}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <img
-          className="w-full h-full object-cover group-hover:scale-110 duration-300 cursor-pointer"
-          src={src}
-          alt="src"
-        />
-        {isHovered && (
-          <div className="modal-container">
-            <div className="modal-content">
-              <img className="zoomed-img" src={src} alt="Zoomed" />
-            </div>
-          </div>
-        )}
-      </div>
-      <div className="w-full mt-5 flex flex-col gap-6">
-        <div>
-          <div className="flex items-center justify-between">
-            <h3 className="text-base uppercase text-designColor font-normal">
-              {title}
-            </h3>
-            <div className="flex gap-2">
-              <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <BsGithub />
-              </span>
-              <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <FaGlobe />
-              </span>
-            </div>
-          </div>
-          <p className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
-            {des}
-          </p>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="py-12 font-titleFont flex gap-20"
+    >
+      <div>
+        <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <ResumeCard
+            title="Complete Web Development"
+            subTitle=" MERN Stack Web Development Course"
+            result="6th month"
+            des="Learn MERN stack web development - MongoDB, Express, React, and Node.js. Build modern web applications with a powerful and scalable tech stack. Gain hands-on experience and become a proficient full-stack developer."
+          />
+          {/* <ResumeCard
+            title="Lorem ipsum dolor sit amet."
+            subTitle="Lorem ipsum dolor sit amet alternative."
+            result="Success"
+            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
+          />
+          <ResumeCard
+            title="Lorem ipsum dolor sit amet."
+            subTitle="Lorem ipsum dolor sit amet alternative."
+            result="Success"
+            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
+          /> */}
         </div>
       </div>
-    </div>
+      <div>
+        <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+          <ResumeCard
+            title="Microsoft Office Applications Course"
+            subTitle=" Master Essential Office Skills for Productivity and Efficiency"
+            result="6th month"
+            des="Master Microsoft Office applications - Word, Excel, PowerPoint, and more. Develop essential skills for document creation, data analysis, and impactful presentations. Enhance your productivity and proficiency in using Microsoft Office tools for professional tasks."
+          />
+          {/* <ResumeCard
+            title="Lorem ipsum dolor sit amet."
+            subTitle="Lorem ipsum dolor sit amet alternative."
+            result="Success"
+            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
+          />
+          <ResumeCard
+            title="Lorem ipsum dolor sit amet."
+            subTitle="Lorem ipsum dolor sit amet alternative."
+            result="Success"
+            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
+          /> */}
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
-export default ProjectsCard;
+export default Achievement;

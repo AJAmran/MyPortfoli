@@ -2,12 +2,12 @@ import React, {  useState } from 'react'
 import Title from '../Layout/Title';
 import Education from './Education';
 import Skills from './Skills';
-import Experience from './Experience';
+import Achievement from './Achivement';
 
 
 const Resume = () => {
-   const [educationData, setEducationData] = useState(true);
-   const [skillData, setSkillData] = useState(false);
+  const [skillData, setSkillData] = useState(true);
+  const [educationData, setEducationData] = useState(false);
    const [experienceData, setExperienceData] = useState(false);
    const [achievementData, setAchievementData] = useState(false);
   return (
@@ -16,7 +16,7 @@ const Resume = () => {
         <Title title="7+ YEARS OF EXPERIENCE" des="My Resume" />
       </div>
       <div>
-        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <li
             onClick={() =>
               setEducationData(false) &
@@ -46,7 +46,7 @@ const Resume = () => {
             Education
           </li>
          
-          <li
+          {/* <li
             onClick={() =>
               setEducationData(false) &
               setSkillData(false) &
@@ -59,8 +59,8 @@ const Resume = () => {
                 : "border-transparent"
             } resumeLi`}
           >
-            Experience
-          </li>
+            Language
+          </li> */}
           <li
             onClick={() =>
               setEducationData(false) &
@@ -81,7 +81,6 @@ const Resume = () => {
       {skillData && <Skills />}
       {educationData && <Education />}
       {achievementData && <Achievement />}
-      {experienceData && <Experience />}
  
     </section>
   );

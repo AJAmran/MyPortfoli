@@ -1,8 +1,10 @@
 import Bannar from "./components/Bannar/Bannar";
 import Navbar from "./components/Navbar/Navbar";
 import Features from "./components/features/Features";
+import Footer from "./components/footer/footer";
 import Projects from "./components/projects/Projects";
 import Resume from "./components/resume/Resume";
+import Contact from "./contract/Contact";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Features />
           <Projects />
           <Resume />
+          <Contact />
+          <Footer />
         </div>
       </div>
     </>
