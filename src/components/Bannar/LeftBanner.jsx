@@ -7,7 +7,7 @@ const LeftBanner = () => {
   const [text] = useTypewriter({
     words: [
       "Full Stack Developer",
-      "Dynamic Web Solutions Expert",
+      "Dynamic Web Solutions",
       "Innovative Web Wizard",
       "Proficient Web Architect",
     ],
@@ -52,8 +52,8 @@ const LeftBanner = () => {
               </a>
             </div>
             <div>
-              <a href={resumePDF} download="resume.pdf" className="btn bg-red-700 px-3 py-4 rounded font-titleFont font-semibold">
-                Download Resume
+              <a href={resumePDF} download="resume.pdf" className="">
+                <button className='btn bg-designColor px-3 py-4 rounded font-titleFont font-semibold'>Download Resume</button>
               </a>
             </div>
           </div>

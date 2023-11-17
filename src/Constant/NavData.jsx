@@ -30,3 +30,5 @@ export const navLinksdata = [
       link: "contact",
     },
   ];
+
+  

@@ -11,22 +11,20 @@ const Projects = () => {
       id="projects"
       className="w-full py-20 border-b-[1px] border-b-black"
     >
-      <div className="flex justify-center items-center text-center">
+      <div className="flex items-center justify-center text-center">
         <Title
           title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"
           des="My Projects"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-14">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-14">
         <ProjectsCard
-          title="SportsMastery"
-          des=" SportMastery is a dynamic online platform where students can explore and purchase their
-          preferred sports courses. Instructors have the opportunity to showcase their expertise by
-          creating accounts and adding their captivating classes. Seamlessly integrated with Stripe, our
-          website ensures smooth and secure payment transactions."
+          title="TrendHaven"
+          des="Created a fully functional e-commerce website called TrendHaven to provide users with a seamless online
+          shopping experience, backend repo: https://github.com/AJAmran/mern-e-commerce-server.git"
           src={projectOne}
-          websiteUrl="https://sport-mastery.web.app/"
-          githubUrl="https://github.com/AJAmran/sportMastey1.0"
+          websiteUrl="https://trendhaven.netlify.app/"
+          githubUrl="https://github.com/AJAmran/mern-e-commerce-client.git"
         />
         <ProjectsCard
           title="EduToysHub"
