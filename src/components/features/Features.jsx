@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../Layout/Title";
 import { featuresData } from "../../Data/Data";
 import Card from "./Card";
-import Editor from "../editor/Editor";
+
 
 
 const Features = () => {

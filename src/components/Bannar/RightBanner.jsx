@@ -1,14 +1,15 @@
 import React from "react";
-import bannerImg from '../../assets/myPhoto2.png'
+import bannerImg from "../../assets/projexts/amranhossen.jpg";
+
 const RightBanner = () => {
   return (
-    <div className="relative flex items-center justify-center w-full lgl:w-1/2">
+    <div className="relative flex items-center justify-center w-full lgl:w-1/2 mt-6 md:mt-0">
       <img
-        className="w-[300px] h-[400px] lgl:w-[500px] lgl:h-[600px] z-10"
+        className="w-[150px] h-[200px] lgl:w-[200px] lgl:h-[250px] z-10 rounded-full"
         src={bannerImg}
         alt="bannerImg"
       />
-      <div className="absolute bottom-0 w-[350px] h-[300px] lgl:w-[500px] lgl:h-[500px] bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne flex justify-center items-center"></div>
+      <div className="absolute w-[250px] h-[250px] lgl:w-[300px] lgl:h-[300px] bg-gradient-to-r from-[#ff014d53] to-[#212428] rounded-full animate-spin-slow"></div>
     </div>
   );
 };
