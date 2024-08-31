@@ -1,6 +1,6 @@
-import React from 'react'
-import { motion } from 'framer-motion';
-import ResumeCard from './ResumeCard';
+import React from "react";
+import { motion } from "framer-motion";
+import ResumeCard from "./ResumeCard";
 
 const Education = () => {
   return (
@@ -12,7 +12,6 @@ const Education = () => {
       {/* part one */}
       <div>
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-          
           <h2 className="text-3xl md:text-4xl font-bold">Education Quality</h2>
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[600px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
@@ -22,26 +21,37 @@ const Education = () => {
             result="3.50/4"
             des="Diploma in Computer Science. Comprehensive training for diverse sectors. Equips me with skills to thrive as a web developer and contribute to the economy and cultural areas."
           />
+          <ResumeCard
+            title="Secondary School Certificate (SSC),"
+            subTitle="Department: Science"
+            result="4.61/5"
+            des="Secondary School Certificate (SSC), Secondary School Leaving Certificate (SSLC) or Matriculation examination, is a public examination in Bangladesh, India, Pakistan, Nepal and Maldives conducted by educational boards for the successful completion of the secondary education exam in these countries."
+          />
         </div>
       </div>
       {/* part Two */}
 
       <div>
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-
           <h2 className="text-3xl md:text-4xl font-bold">Job Experience</h2>
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[600px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-         <ResumeCard
+          <ResumeCard
             title="It Head Operation"
             subTitle="Road to Public University (2019 - 22)"
             result="Chattogran"
             des="As the IT Head Operator at Road to Public University, I oversaw and managed the organization's ensuring smooth operation of computer systems, networks. "
           />
+          <ResumeCard
+            title="Web Developer"
+            subTitle="Bangabandhu International Conference Center (2024 - Now)"
+            result="Agargaon Dhaka"
+            des="As the Web Developer at Bangabandhu International Conference Center (BICC), I am responsible for designing, developing, and maintaining the organization's websites, ensuring a seamless user experience and optimal functionality across all digital platforms. "
+          />
         </div>
       </div>
     </motion.div>
   );
-}
+};
 
 export default Education;
