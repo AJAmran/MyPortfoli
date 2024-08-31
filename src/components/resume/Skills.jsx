@@ -12,11 +12,9 @@ const Skills = () => {
             key={skill._id}
             className="flex items-center p-4 transition-transform rounded-lg shadow-lg bg-zinc-900 transform-gpu hover:scale-105"
           >
-            <img
-              src={skill.img}
-              alt={skill.title}
-              className="w-8 h-8 mr-4"
-            />
+            <div className="w-8 h-8 mr-4 text-3xl">
+              {skill.icon}
+            </div>
             <div>
               <h3 className="text-lg font-semibold">{skill.title}</h3>
             </div>

@@ -1,0 +1,32 @@
+.image-gallery-container .image-gallery-slide img {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-gallery-container .image-gallery-slide img:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-gallery-container .image-gallery-slide {
+    background-color: #1e2024;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .image-gallery-container .image-gallery-thumbnail img {
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-gallery-container .image-gallery-thumbnail img:hover {
+    transform: scale(1.1);
+  }
+  
